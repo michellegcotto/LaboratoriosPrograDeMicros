@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\Debug\prelab3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>prelab3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>prelab3.map</FILE>
+  <FILE>prelab3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <PREVIO><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>14</LINE></PREVIO>
+  <SETUP><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>25</LINE></SETUP>
+  <PCINT_ISR><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>64</LINE></PCINT_ISR>
+  <MAIN_LOOP><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>59</LINE></MAIN_LOOP>
+  <REVISAR><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>77</LINE></REVISAR>
+  <INCREMENTAR><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>88</LINE></INCREMENTAR>
+  <GUARDAR_ESTADO><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>84</LINE></GUARDAR_ESTADO>
+  <DECREMENTAR><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\prelab3\prelab3\main.asm</FILE><LINE>94</LINE></DECREMENTAR>
+ </LABELS>
+</ASSEMBLER_INFO>
