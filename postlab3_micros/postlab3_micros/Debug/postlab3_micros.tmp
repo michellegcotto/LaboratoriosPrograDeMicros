@@ -1,0 +1,53 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\Debug\postlab3_micros.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>postlab3_micros.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>postlab3_micros.map</FILE>
+  <FILE>postlab3_micros.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <VAL_LEDS><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>19</LINE></VAL_LEDS>
+  <DISP_UNI><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>20</LINE></DISP_UNI>
+  <DISP_DEC><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>21</LINE></DISP_DEC>
+  <SEL_DISPLAY><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>22</LINE></SEL_DISPLAY>
+  <TICKS_1S><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>23</LINE></TICKS_1S>
+  <FLAG_INC><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>24</LINE></FLAG_INC>
+  <FLAG_DEC><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>25</LINE></FLAG_DEC>
+  <INIT_STACK><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>38</LINE></INIT_STACK>
+  <ISR_BUTTONS><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>244</LINE></ISR_BUTTONS>
+  <ISR_TIMER0><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>221</LINE></ISR_TIMER0>
+  <MCU_INIT><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>46</LINE></MCU_INIT>
+  <UPDATE_DISPLAY><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>186</LINE></UPDATE_DISPLAY>
+  <CONFIG_TIMER0><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>168</LINE></CONFIG_TIMER0>
+  <MAIN_LOOP><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>93</LINE></MAIN_LOOP>
+  <SHOW_UNITS><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>103</LINE></SHOW_UNITS>
+  <END_SELECT><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>107</LINE></END_SELECT>
+  <CHECK_BUTTONS><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>136</LINE></CHECK_BUTTONS>
+  <STORE_VALUES><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>130</LINE></STORE_VALUES>
+  <CHECK_DECREMENT><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>150</LINE></CHECK_DECREMENT>
+  <LOAD_UNITS><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>199</LINE></LOAD_UNITS>
+  <LOAD_DONE><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>202</LINE></LOAD_DONE>
+  <TABLE7SEG><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>279</LINE></TABLE7SEG>
+  <ACTIVATE_INC><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>256</LINE></ACTIVATE_INC>
+  <CHECK_SECOND><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>260</LINE></CHECK_SECOND>
+  <ACTIVATE_DEC><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>265</LINE></ACTIVATE_DEC>
+  <EXIT_ISR><FILE>C:\Users\miche\OneDrive\Documentos\Atmel Studio\LaboratoriosPrograDeMicros\postlab3_micros\postlab3_micros\main.asm</FILE><LINE>269</LINE></EXIT_ISR>
+ </LABELS>
+</ASSEMBLER_INFO>
