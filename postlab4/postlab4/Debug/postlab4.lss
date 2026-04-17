@@ -1,0 +1,673 @@
+
+postlab4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000492  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000d0  00000000  00000000  000000d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000002f  00000000  00000000  00000492  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  000004c1  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000058  00000000  00000000  000004cf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000c1e  00000000  00000000  00000527  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000751  00000000  00000000  00001145  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000407  00000000  00000000  00001896  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000d8  00000000  00000000  00001ca0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000208  00000000  00000000  00001d78  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001ca  00000000  00000000  00001f80  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000048  00000000  00000000  0000214a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  0000039c  0000039c  00000470  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00002194  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.initADC 0000001e  0000034a  0000034a  0000041e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.setup   0000003a  000002c0  000002c0  00000394  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.dec_hex 0000001e  00000368  00000368  0000043c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .rodata       00000010  00800100  000003aa  0000047e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .text.dispsegG 0000005a  00000266  00000266  0000033a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.comparacion 00000026  00000324  00000324  000003f8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.main    000000f2  000000e0  000000e0  000001b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.__vector_21 0000002a  000002fa  000002fa  000003ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.__vector_4 00000094  000001d2  000001d2  000002a6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .bss.HighNibble 00000002  00800110  00800110  00000492  2**0
+                  ALLOC
+ 24 .bss.LowNibble 00000002  00800112  00800112  00000492  2**0
+                  ALLOC
+ 25 .bss.contadorADC 00000002  00800114  00800114  00000492  2**0
+                  ALLOC
+ 26 .bss.contador 00000002  00800116  00800116  00000492  2**0
+                  ALLOC
+ 27 .progmemx.data.hexaDisplay 00000010  000000d0  000000d0  000001a4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, PROGMEMX
+ 28 .data.ButtonState_2 00000001  00800118  000003ba  0000048e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 29 .data.ButtonLastState_2 00000001  00800119  000003bb  0000048f  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 30 .data.ButtonState_1 00000001  0080011a  000003bc  00000490  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 31 .data.ButtonLastState_1 00000001  0080011b  000003bd  00000491  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 32 .text.__dummy_fini 00000002  000003a4  000003a4  00000478  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 33 .text.__dummy_funcs_on_exit 00000002  000003a6  000003a6  0000047a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 34 .text.__dummy_simulator_exit 00000002  000003a8  000003a8  0000047c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.exit    00000016  00000386  00000386  0000045a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text._Exit   00000004  000003a0  000003a0  00000474  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__ctors_end>
+   4:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+   8:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+   c:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  10:	0c 94 e9 00 	jmp	0x1d2	; 0x1d2 <__vector_4>
+  14:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  18:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  1c:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  20:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  24:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  28:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  2c:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  30:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  34:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  38:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  3c:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  40:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  44:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  48:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  4c:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  50:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  54:	0c 94 7d 01 	jmp	0x2fa	; 0x2fa <__vector_21>
+  58:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  5c:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  60:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+  64:	0c 94 ce 01 	jmp	0x39c	; 0x39c <__bad_interrupt>
+
+00000068 <.dinit>:
+  68:	01 00       	.word	0x0001	; ????
+  6a:	01 10       	cpse	r0, r1
+  6c:	00 03       	mulsu	r16, r16
+  6e:	aa 01       	movw	r20, r20
+  70:	10 01       	movw	r2, r0
+  72:	18 80       	ld	r1, Y
+  74:	01 18       	sub	r0, r1
+  76:	01 1c       	adc	r0, r1
+  78:	00 03       	mulsu	r16, r16
+  7a:	ba 00       	.word	0x00ba	; ????
+
+0000007c <__ctors_end>:
+  7c:	11 24       	eor	r1, r1
+  7e:	1f be       	out	0x3f, r1	; 63
+  80:	cf ef       	ldi	r28, 0xFF	; 255
+  82:	d8 e0       	ldi	r29, 0x08	; 8
+  84:	de bf       	out	0x3e, r29	; 62
+  86:	cd bf       	out	0x3d, r28	; 61
+
+00000088 <__do_copy_data>:
+  88:	e8 e6       	ldi	r30, 0x68	; 104
+  8a:	f0 e0       	ldi	r31, 0x00	; 0
+  8c:	40 e0       	ldi	r20, 0x00	; 0
+  8e:	17 c0       	rjmp	.+46     	; 0xbe <__do_clear_bss+0x8>
+  90:	b5 91       	lpm	r27, Z+
+  92:	a5 91       	lpm	r26, Z+
+  94:	35 91       	lpm	r19, Z+
+  96:	25 91       	lpm	r18, Z+
+  98:	05 91       	lpm	r16, Z+
+  9a:	07 fd       	sbrc	r16, 7
+  9c:	0c c0       	rjmp	.+24     	; 0xb6 <__do_clear_bss>
+  9e:	95 91       	lpm	r25, Z+
+  a0:	85 91       	lpm	r24, Z+
+  a2:	ef 01       	movw	r28, r30
+  a4:	f9 2f       	mov	r31, r25
+  a6:	e8 2f       	mov	r30, r24
+  a8:	05 90       	lpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 17       	cp	r26, r18
+  ae:	b3 07       	cpc	r27, r19
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x20>
+  b2:	fe 01       	movw	r30, r28
+  b4:	04 c0       	rjmp	.+8      	; 0xbe <__do_clear_bss+0x8>
+
+000000b6 <__do_clear_bss>:
+  b6:	1d 92       	st	X+, r1
+  b8:	a2 17       	cp	r26, r18
+  ba:	b3 07       	cpc	r27, r19
+  bc:	e1 f7       	brne	.-8      	; 0xb6 <__do_clear_bss>
+  be:	eb 37       	cpi	r30, 0x7B	; 123
+  c0:	f4 07       	cpc	r31, r20
+  c2:	31 f7       	brne	.-52     	; 0x90 <__do_copy_data+0x8>
+  c4:	0e 94 70 00 	call	0xe0	; 0xe0 <main>
+  c8:	0c 94 c3 01 	jmp	0x386	; 0x386 <exit>
+
+000000cc <_exit>:
+  cc:	f8 94       	cli
+
+000000ce <__stop_program>:
+  ce:	ff cf       	rjmp	.-2      	; 0xce <__stop_program>
+
+Disassembly of section .text:
+
+0000039c <__bad_interrupt>:
+ 39c:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.initADC:
+
+0000034a <initADC>:
+    initADC();
+}
+
+void initADC(void){
+    // Seleccionar ADC7 (PC7) - bits 0111 (0x07)
+    ADMUX = (ADMUX & 0xF0) | 0x07;
+ 34a:	ec e7       	ldi	r30, 0x7C	; 124
+ 34c:	f0 e0       	ldi	r31, 0x00	; 0
+ 34e:	80 81       	ld	r24, Z
+ 350:	80 7f       	andi	r24, 0xF0	; 240
+ 352:	87 60       	ori	r24, 0x07	; 7
+ 354:	80 83       	st	Z, r24
+    
+    // Vref = AVCC, Justificado a la izquierda (8 bits en ADCH)
+    ADMUX |= (1<<REFS0) | (1<<ADLAR);
+ 356:	80 81       	ld	r24, Z
+ 358:	80 66       	ori	r24, 0x60	; 96
+ 35a:	80 83       	st	Z, r24
+    
+    // Prescaler 128 y habilitar interrupciònes
+    ADCSRA |= (1<<ADEN) | (1<<ADIE) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+ 35c:	ea e7       	ldi	r30, 0x7A	; 122
+ 35e:	f0 e0       	ldi	r31, 0x00	; 0
+ 360:	80 81       	ld	r24, Z
+ 362:	8f 68       	ori	r24, 0x8F	; 143
+ 364:	80 83       	st	Z, r24
+ 366:	08 95       	ret
+
+Disassembly of section .text.setup:
+
+000002c0 <setup>:
+/**************/
+// NON-Interrupt subroutines
+
+//Configuracion
+void setup(){
+    cli();
+ 2c0:	f8 94       	cli
+    
+    // PORTD: Salida para el contador binario
+    DDRD = 0xFF;
+ 2c2:	8f ef       	ldi	r24, 0xFF	; 255
+ 2c4:	8a b9       	out	0x0a, r24	; 10
+    PORTD = 0;
+ 2c6:	1b b8       	out	0x0b, r1	; 11
+    UCSR0B = 0; // Deshabilitar RX/TX para usar pines de PORTD
+ 2c8:	10 92 c1 00 	sts	0x00C1, r1	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7f80c1>
+
+    // PORTB: Salida para segmentos A-F
+    DDRB = 0xFF;
+ 2cc:	84 b9       	out	0x04, r24	; 4
+    
+    // PORTC: 
+    
+    //-Salidas
+    DDRC |= (1<<PC0) | (1<<PC1) | (1<<PC2) | (1<<PC5); //PC1 segmento G - PC1 y PC2 MULTIPLEX / PC5 LED alarma
+ 2ce:	87 b1       	in	r24, 0x07	; 7
+ 2d0:	87 62       	ori	r24, 0x27	; 39
+ 2d2:	87 b9       	out	0x07, r24	; 7
+    
+    //-Entradas
+    DDRC &= ~((1<<PC3) | (1<<PC4)); // Botones en PC3 y PC4
+ 2d4:	87 b1       	in	r24, 0x07	; 7
+ 2d6:	87 7e       	andi	r24, 0xE7	; 231
+ 2d8:	87 b9       	out	0x07, r24	; 7
+    PORTC |= (1<<PC3) | (1<<PC4);  // Pull-ups
+ 2da:	88 b1       	in	r24, 0x08	; 8
+ 2dc:	88 61       	ori	r24, 0x18	; 24
+ 2de:	88 b9       	out	0x08, r24	; 8
+    
+
+    // Interrupciones de cambio de pin para PC3 y PC4 (Puerto C -> PCIE1)
+    PCICR |= (1<<PCIE1);
+ 2e0:	e8 e6       	ldi	r30, 0x68	; 104
+ 2e2:	f0 e0       	ldi	r31, 0x00	; 0
+ 2e4:	80 81       	ld	r24, Z
+ 2e6:	82 60       	ori	r24, 0x02	; 2
+ 2e8:	80 83       	st	Z, r24
+    PCMSK1 |= (1<<PCINT11) | (1<<PCINT12);
+ 2ea:	ec e6       	ldi	r30, 0x6C	; 108
+ 2ec:	f0 e0       	ldi	r31, 0x00	; 0
+ 2ee:	80 81       	ld	r24, Z
+ 2f0:	88 61       	ori	r24, 0x18	; 24
+ 2f2:	80 83       	st	Z, r24
+    
+    // PC7: Entrada ADC 
+        
+    initADC();
+ 2f4:	0e 94 a5 01 	call	0x34a	; 0x34a <initADC>
+ 2f8:	08 95       	ret
+
+Disassembly of section .text.dec_hex:
+
+00000368 <dec_hex>:
+    // Prescaler 128 y habilitar interrupciònes
+    ADCSRA |= (1<<ADEN) | (1<<ADIE) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+}
+
+void dec_hex(uint8_t val){
+    HighNibble = val / 16;		//Divide el val en 16 
+ 368:	28 2f       	mov	r18, r24
+ 36a:	22 95       	swap	r18
+ 36c:	2f 70       	andi	r18, 0x0F	; 15
+ 36e:	30 e0       	ldi	r19, 0x00	; 0
+ 370:	30 93 11 01 	sts	0x0111, r19	; 0x800111 <HighNibble+0x1>
+ 374:	20 93 10 01 	sts	0x0110, r18	; 0x800110 <HighNibble>
+    LowNibble = val % 16;		//Obtiene el residuo de la divisiòn de 16 
+ 378:	8f 70       	andi	r24, 0x0F	; 15
+ 37a:	90 e0       	ldi	r25, 0x00	; 0
+ 37c:	90 93 13 01 	sts	0x0113, r25	; 0x800113 <LowNibble+0x1>
+ 380:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <LowNibble>
+ 384:	08 95       	ret
+
+Disassembly of section .text.dispsegG:
+
+00000266 <dispsegG>:
+}
+
+void dispsegG(int valor){
+ 266:	cf 93       	push	r28
+ 268:	df 93       	push	r29
+ 26a:	cd b7       	in	r28, 0x3d	; 61
+ 26c:	de b7       	in	r29, 0x3e	; 62
+ 26e:	60 97       	sbiw	r28, 0x10	; 16
+ 270:	0f b6       	in	r0, 0x3f	; 63
+ 272:	f8 94       	cli
+ 274:	de bf       	out	0x3e, r29	; 62
+ 276:	0f be       	out	0x3f, r0	; 63
+ 278:	cd bf       	out	0x3d, r28	; 61
+    // Controla el segmento G conectado a PC0
+    
+    // Usando const uint8_t para la tabla del segmento G
+    const uint8_t tablaG[16] = {0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1};
+ 27a:	20 e1       	ldi	r18, 0x10	; 16
+ 27c:	e0 e0       	ldi	r30, 0x00	; 0
+ 27e:	f1 e0       	ldi	r31, 0x01	; 1
+ 280:	de 01       	movw	r26, r28
+ 282:	11 96       	adiw	r26, 0x01	; 1
+ 284:	01 90       	ld	r0, Z+
+ 286:	0d 92       	st	X+, r0
+ 288:	2a 95       	dec	r18
+ 28a:	e1 f7       	brne	.-8      	; 0x284 <dispsegG+0x1e>
+    
+    if(tablaG[valor]) 
+ 28c:	21 e0       	ldi	r18, 0x01	; 1
+ 28e:	30 e0       	ldi	r19, 0x00	; 0
+ 290:	2c 0f       	add	r18, r28
+ 292:	3d 1f       	adc	r19, r29
+ 294:	82 0f       	add	r24, r18
+ 296:	93 1f       	adc	r25, r19
+ 298:	fc 01       	movw	r30, r24
+ 29a:	80 81       	ld	r24, Z
+ 29c:	88 23       	and	r24, r24
+ 29e:	21 f0       	breq	.+8      	; 0x2a8 <dispsegG+0x42>
+        PORTC &= ~(1<<PC0);  //0 encendido
+ 2a0:	88 b1       	in	r24, 0x08	; 8
+ 2a2:	8e 7f       	andi	r24, 0xFE	; 254
+ 2a4:	88 b9       	out	0x08, r24	; 8
+ 2a6:	03 c0       	rjmp	.+6      	; 0x2ae <dispsegG+0x48>
+    else              
+        PORTC |= (1<<PC0); //1 apagado
+ 2a8:	88 b1       	in	r24, 0x08	; 8
+ 2aa:	81 60       	ori	r24, 0x01	; 1
+ 2ac:	88 b9       	out	0x08, r24	; 8
+}
+ 2ae:	60 96       	adiw	r28, 0x10	; 16
+ 2b0:	0f b6       	in	r0, 0x3f	; 63
+ 2b2:	f8 94       	cli
+ 2b4:	de bf       	out	0x3e, r29	; 62
+ 2b6:	0f be       	out	0x3f, r0	; 63
+ 2b8:	cd bf       	out	0x3d, r28	; 61
+ 2ba:	df 91       	pop	r29
+ 2bc:	cf 91       	pop	r28
+ 2be:	08 95       	ret
+
+Disassembly of section .text.comparacion:
+
+00000324 <comparacion>:
+
+//POST - LAB
+void comparacion(void) {
+	if (contador < contadorADC) {
+ 324:	20 91 16 01 	lds	r18, 0x0116	; 0x800116 <contador>
+ 328:	30 91 17 01 	lds	r19, 0x0117	; 0x800117 <contador+0x1>
+ 32c:	80 91 14 01 	lds	r24, 0x0114	; 0x800114 <contadorADC>
+ 330:	90 91 15 01 	lds	r25, 0x0115	; 0x800115 <contadorADC+0x1>
+ 334:	28 17       	cp	r18, r24
+ 336:	39 07       	cpc	r19, r25
+ 338:	24 f4       	brge	.+8      	; 0x342 <comparacion+0x1e>
+		PORTC |= (1 << PC5);  // Enciende PC5 si son iguales
+ 33a:	88 b1       	in	r24, 0x08	; 8
+ 33c:	80 62       	ori	r24, 0x20	; 32
+ 33e:	88 b9       	out	0x08, r24	; 8
+ 340:	08 95       	ret
+		} else {
+		PORTC &= ~(1 << PC5); // Apaga PC5 si son distintos
+ 342:	88 b1       	in	r24, 0x08	; 8
+ 344:	8f 7d       	andi	r24, 0xDF	; 223
+ 346:	88 b9       	out	0x08, r24	; 8
+ 348:	08 95       	ret
+
+Disassembly of section .text.main:
+
+000000e0 <main>:
+int HighNibble = 0;
+
+//***************************************************************************
+int main(void)
+{
+    setup();
+  e0:	0e 94 60 01 	call	0x2c0	; 0x2c0 <setup>
+    sei();
+  e4:	78 94       	sei
+
+    while (1)
+    {
+		
+		
+		ADCSRA |= (1<<ADSC);
+  e6:	ea e7       	ldi	r30, 0x7A	; 122
+  e8:	f0 e0       	ldi	r31, 0x00	; 0
+  ea:	80 81       	ld	r24, Z
+  ec:	80 64       	ori	r24, 0x40	; 64
+  ee:	80 83       	st	Z, r24
+		dec_hex(contadorADC);
+  f0:	80 91 14 01 	lds	r24, 0x0114	; 0x800114 <contadorADC>
+  f4:	90 91 15 01 	lds	r25, 0x0115	; 0x800115 <contadorADC+0x1>
+  f8:	0e 94 b4 01 	call	0x368	; 0x368 <dec_hex>
+		
+		comparacion();
+  fc:	0e 94 92 01 	call	0x324	; 0x324 <comparacion>
+		
+		
+        // Límites del contador binario (PORTD)
+        if (contador > 255) contador = 0;
+ 100:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <contador>
+ 104:	90 91 17 01 	lds	r25, 0x0117	; 0x800117 <contador+0x1>
+ 108:	8f 3f       	cpi	r24, 0xFF	; 255
+ 10a:	91 05       	cpc	r25, r1
+ 10c:	29 f0       	breq	.+10     	; 0x118 <main+0x38>
+ 10e:	24 f0       	brlt	.+8      	; 0x118 <main+0x38>
+ 110:	10 92 17 01 	sts	0x0117, r1	; 0x800117 <contador+0x1>
+ 114:	10 92 16 01 	sts	0x0116, r1	; 0x800116 <contador>
+        if (contador < 0)   contador = 255;
+ 118:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <contador>
+ 11c:	90 91 17 01 	lds	r25, 0x0117	; 0x800117 <contador+0x1>
+ 120:	99 23       	and	r25, r25
+ 122:	34 f4       	brge	.+12     	; 0x130 <main+0x50>
+ 124:	8f ef       	ldi	r24, 0xFF	; 255
+ 126:	90 e0       	ldi	r25, 0x00	; 0
+ 128:	90 93 17 01 	sts	0x0117, r25	; 0x800117 <contador+0x1>
+ 12c:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <contador>
+        PORTD = contador;
+ 130:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <contador>
+ 134:	8b b9       	out	0x0b, r24	; 11
+        
+        // Iniciar conversión ADC
+        ADCSRA |= (1<<ADSC);
+ 136:	ea e7       	ldi	r30, 0x7A	; 122
+ 138:	f0 e0       	ldi	r31, 0x00	; 0
+ 13a:	80 81       	ld	r24, Z
+ 13c:	80 64       	ori	r24, 0x40	; 64
+ 13e:	80 83       	st	Z, r24
+        
+        dec_hex(contadorADC);
+ 140:	80 91 14 01 	lds	r24, 0x0114	; 0x800114 <contadorADC>
+ 144:	90 91 15 01 	lds	r25, 0x0115	; 0x800115 <contadorADC+0x1>
+ 148:	0e 94 b4 01 	call	0x368	; 0x368 <dec_hex>
+
+        // Mostrar Digito 1 (enciende PC1)
+        PORTB = hexaDisplay[HighNibble]; // Envía segmentos A-F
+ 14c:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <HighNibble>
+ 150:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <HighNibble+0x1>
+ 154:	09 2e       	mov	r0, r25
+ 156:	00 0c       	add	r0, r0
+ 158:	aa 0b       	sbc	r26, r26
+ 15a:	80 53       	subi	r24, 0x30	; 48
+ 15c:	9f 4f       	sbci	r25, 0xFF	; 255
+ 15e:	af 4f       	sbci	r26, 0xFF	; 255
+ 160:	fc 01       	movw	r30, r24
+ 162:	84 91       	lpm	r24, Z
+ 164:	a7 fd       	sbrc	r26, 7
+ 166:	80 81       	ld	r24, Z
+ 168:	85 b9       	out	0x05, r24	; 5
+        dispsegG(HighNibble);            // Envía segmento G a PC0
+ 16a:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <HighNibble>
+ 16e:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <HighNibble+0x1>
+ 172:	0e 94 33 01 	call	0x266	; 0x266 <dispsegG>
+        
+        PORTC &= ~(1<<PC1);              // Enciende D1
+ 176:	88 b1       	in	r24, 0x08	; 8
+ 178:	8d 7f       	andi	r24, 0xFD	; 253
+ 17a:	88 b9       	out	0x08, r24	; 8
+        PORTC |= (1<<PC2);             // Apaga D2
+ 17c:	88 b1       	in	r24, 0x08	; 8
+ 17e:	84 60       	ori	r24, 0x04	; 4
+ 180:	88 b9       	out	0x08, r24	; 8
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 182:	8f e1       	ldi	r24, 0x1F	; 31
+ 184:	9e e4       	ldi	r25, 0x4E	; 78
+ 186:	01 97       	sbiw	r24, 0x01	; 1
+ 188:	f1 f7       	brne	.-4      	; 0x186 <main+0xa6>
+ 18a:	00 c0       	rjmp	.+0      	; 0x18c <main+0xac>
+ 18c:	00 00       	nop
+        
+        _delay_ms(tMulx);
+        
+        // Mostrar Digito 2 (enciende PC2)
+        PORTB = hexaDisplay[LowNibble];
+ 18e:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <LowNibble>
+ 192:	90 91 13 01 	lds	r25, 0x0113	; 0x800113 <LowNibble+0x1>
+ 196:	09 2e       	mov	r0, r25
+ 198:	00 0c       	add	r0, r0
+ 19a:	aa 0b       	sbc	r26, r26
+ 19c:	80 53       	subi	r24, 0x30	; 48
+ 19e:	9f 4f       	sbci	r25, 0xFF	; 255
+ 1a0:	af 4f       	sbci	r26, 0xFF	; 255
+ 1a2:	fc 01       	movw	r30, r24
+ 1a4:	84 91       	lpm	r24, Z
+ 1a6:	a7 fd       	sbrc	r26, 7
+ 1a8:	80 81       	ld	r24, Z
+ 1aa:	85 b9       	out	0x05, r24	; 5
+        dispsegG(LowNibble);
+ 1ac:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <LowNibble>
+ 1b0:	90 91 13 01 	lds	r25, 0x0113	; 0x800113 <LowNibble+0x1>
+ 1b4:	0e 94 33 01 	call	0x266	; 0x266 <dispsegG>
+        
+        PORTC &= ~(1<<PC2);              // Enciende D2
+ 1b8:	88 b1       	in	r24, 0x08	; 8
+ 1ba:	8b 7f       	andi	r24, 0xFB	; 251
+ 1bc:	88 b9       	out	0x08, r24	; 8
+        PORTC |= (1<<PC1);             // Apaga D1
+ 1be:	88 b1       	in	r24, 0x08	; 8
+ 1c0:	82 60       	ori	r24, 0x02	; 2
+ 1c2:	88 b9       	out	0x08, r24	; 8
+ 1c4:	8f e1       	ldi	r24, 0x1F	; 31
+ 1c6:	9e e4       	ldi	r25, 0x4E	; 78
+ 1c8:	01 97       	sbiw	r24, 0x01	; 1
+ 1ca:	f1 f7       	brne	.-4      	; 0x1c8 <main+0xe8>
+ 1cc:	00 c0       	rjmp	.+0      	; 0x1ce <main+0xee>
+ 1ce:	00 00       	nop
+ 1d0:	8a cf       	rjmp	.-236    	; 0xe6 <main+0x6>
+
+Disassembly of section .text.__vector_21:
+
+000002fa <__vector_21>:
+}
+
+/**************/
+// Interrupt routines
+
+ISR(ADC_vect){
+ 2fa:	1f 92       	push	r1
+ 2fc:	0f 92       	push	r0
+ 2fe:	0f b6       	in	r0, 0x3f	; 63
+ 300:	0f 92       	push	r0
+ 302:	11 24       	eor	r1, r1
+ 304:	8f 93       	push	r24
+ 306:	9f 93       	push	r25
+    contadorADC = ADCH; // Lee los 8 bits superiores (Justificado a la izquierda) 
+ 308:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x7f8079>
+ 30c:	90 e0       	ldi	r25, 0x00	; 0
+ 30e:	90 93 15 01 	sts	0x0115, r25	; 0x800115 <contadorADC+0x1>
+ 312:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <contadorADC>
+}
+ 316:	9f 91       	pop	r25
+ 318:	8f 91       	pop	r24
+ 31a:	0f 90       	pop	r0
+ 31c:	0f be       	out	0x3f, r0	; 63
+ 31e:	0f 90       	pop	r0
+ 320:	1f 90       	pop	r1
+ 322:	18 95       	reti
+
+Disassembly of section .text.__vector_4:
+
+000001d2 <__vector_4>:
+
+ISR(PCINT1_vect){
+ 1d2:	1f 92       	push	r1
+ 1d4:	0f 92       	push	r0
+ 1d6:	0f b6       	in	r0, 0x3f	; 63
+ 1d8:	0f 92       	push	r0
+ 1da:	11 24       	eor	r1, r1
+ 1dc:	2f 93       	push	r18
+ 1de:	3f 93       	push	r19
+ 1e0:	8f 93       	push	r24
+ 1e2:	9f 93       	push	r25
+ 1e4:	2f ef       	ldi	r18, 0xFF	; 255
+ 1e6:	89 ef       	ldi	r24, 0xF9	; 249
+ 1e8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ea:	21 50       	subi	r18, 0x01	; 1
+ 1ec:	80 40       	sbci	r24, 0x00	; 0
+ 1ee:	90 40       	sbci	r25, 0x00	; 0
+ 1f0:	e1 f7       	brne	.-8      	; 0x1ea <__vector_4+0x18>
+ 1f2:	00 c0       	rjmp	.+0      	; 0x1f4 <__vector_4+0x22>
+ 1f4:	00 00       	nop
+    _delay_ms(20); // Anti-rebote
+    
+    ButtonState_1 = PINC & (1<<PINC3);
+ 1f6:	96 b1       	in	r25, 0x06	; 6
+ 1f8:	98 70       	andi	r25, 0x08	; 8
+ 1fa:	90 93 1a 01 	sts	0x011A, r25	; 0x80011a <ButtonState_1>
+    ButtonState_2 = PINC & (1<<PINC4);
+ 1fe:	86 b1       	in	r24, 0x06	; 6
+ 200:	80 71       	andi	r24, 0x10	; 16
+ 202:	80 93 18 01 	sts	0x0118, r24	; 0x800118 <ButtonState_2>
+    
+    // Botón 1: Incremento
+    if ((ButtonState_1 == 0) && (ButtonLastState_1 != 0)){
+ 206:	91 11       	cpse	r25, r1
+ 208:	0e c0       	rjmp	.+28     	; 0x226 <__vector_4+0x54>
+ 20a:	20 91 1b 01 	lds	r18, 0x011B	; 0x80011b <ButtonLastState_1>
+ 20e:	22 23       	and	r18, r18
+ 210:	51 f0       	breq	.+20     	; 0x226 <__vector_4+0x54>
+        contador++;
+ 212:	20 91 16 01 	lds	r18, 0x0116	; 0x800116 <contador>
+ 216:	30 91 17 01 	lds	r19, 0x0117	; 0x800117 <contador+0x1>
+ 21a:	2f 5f       	subi	r18, 0xFF	; 255
+ 21c:	3f 4f       	sbci	r19, 0xFF	; 255
+ 21e:	30 93 17 01 	sts	0x0117, r19	; 0x800117 <contador+0x1>
+ 222:	20 93 16 01 	sts	0x0116, r18	; 0x800116 <contador>
+    }
+    ButtonLastState_1 = ButtonState_1;
+ 226:	90 93 1b 01 	sts	0x011B, r25	; 0x80011b <ButtonLastState_1>
+    
+    // Botón 2: Decremento
+    if ((ButtonState_2 == 0) && (ButtonLastState_2 != 0)){
+ 22a:	81 11       	cpse	r24, r1
+ 22c:	0e c0       	rjmp	.+28     	; 0x24a <__vector_4+0x78>
+ 22e:	90 91 19 01 	lds	r25, 0x0119	; 0x800119 <ButtonLastState_2>
+ 232:	99 23       	and	r25, r25
+ 234:	51 f0       	breq	.+20     	; 0x24a <__vector_4+0x78>
+        contador--;
+ 236:	20 91 16 01 	lds	r18, 0x0116	; 0x800116 <contador>
+ 23a:	30 91 17 01 	lds	r19, 0x0117	; 0x800117 <contador+0x1>
+ 23e:	21 50       	subi	r18, 0x01	; 1
+ 240:	31 09       	sbc	r19, r1
+ 242:	30 93 17 01 	sts	0x0117, r19	; 0x800117 <contador+0x1>
+ 246:	20 93 16 01 	sts	0x0116, r18	; 0x800116 <contador>
+    }
+    ButtonLastState_2 = ButtonState_2;
+ 24a:	80 93 19 01 	sts	0x0119, r24	; 0x800119 <ButtonLastState_2>
+    
+    PCIFR |= (1<<PCIF1); // Limpiar bandera
+ 24e:	8b b3       	in	r24, 0x1b	; 27
+ 250:	82 60       	ori	r24, 0x02	; 2
+ 252:	8b bb       	out	0x1b, r24	; 27
+}
+ 254:	9f 91       	pop	r25
+ 256:	8f 91       	pop	r24
+ 258:	3f 91       	pop	r19
+ 25a:	2f 91       	pop	r18
+ 25c:	0f 90       	pop	r0
+ 25e:	0f be       	out	0x3f, r0	; 63
+ 260:	0f 90       	pop	r0
+ 262:	1f 90       	pop	r1
+ 264:	18 95       	reti
+
+Disassembly of section .text.__dummy_fini:
+
+000003a4 <_fini>:
+ 3a4:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+000003a6 <__funcs_on_exit>:
+ 3a6:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+000003a8 <__simulator_exit>:
+ 3a8:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000386 <exit>:
+ 386:	ec 01       	movw	r28, r24
+ 388:	0e 94 d3 01 	call	0x3a6	; 0x3a6 <__funcs_on_exit>
+ 38c:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <_fini>
+ 390:	ce 01       	movw	r24, r28
+ 392:	0e 94 d4 01 	call	0x3a8	; 0x3a8 <__simulator_exit>
+ 396:	ce 01       	movw	r24, r28
+ 398:	0e 94 d0 01 	call	0x3a0	; 0x3a0 <_Exit>
+
+Disassembly of section .text._Exit:
+
+000003a0 <_Exit>:
+ 3a0:	0e 94 66 00 	call	0xcc	; 0xcc <_exit>
